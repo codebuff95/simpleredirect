@@ -1,0 +1,12 @@
+<html>
+	<form method = "POST" action="/login">
+	Email id: <input type = "text" name = "email" placeholder = "Enter Registered Email Id">
+	Password: <input type = "password" name = "password" placeholder = "Enter Password">
+	<input type = "checkbox" name = "rememberme" value = "Yes"> Remember Me <br>
+	<input type = "hidden" name = "formsid" value = "{{.}}">
+	<input type = "submit" name = "submit" value = "Login">
+</form>
+<p>
+	New Here? <a href= "/register" > Register now.</a>
+</p>
+</html>

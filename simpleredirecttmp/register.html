@@ -1,0 +1,13 @@
+<html>
+	<form method = "POST" action="/register">
+	First Name: <input type = "text" name = "firstname" placeholder = "Enter First Name">
+	Last Name: <input type = "text" name = "lastname" placeholder = "Enter Last Name">
+	Email id: <input type = "text" name = "email" placeholder = "Enter Email Id">
+	Password: <input type = "password" name = "password" placeholder = "Enter Password">
+	<input type = "hidden" name = "formsid" value = "{{.}}">
+	<input type = "submit" name = "submit" value = "Register">
+</form>
+<p>
+	Already have an account? <a href= "/login" >Login Here.</a>
+</p>
+</html>

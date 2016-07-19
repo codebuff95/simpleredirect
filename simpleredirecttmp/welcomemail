@@ -1,0 +1,13 @@
+From: SimpleRedirect
+To: {{.Email}}
+Subject: Welcome to SimpleRedirect!
+
+Hello {{.Firstname}}!
+
+We warmly welcome you to SimpleRedirect.
+Your account details are:
+Name: {{.Firstname}} {{.Lastname}}
+You can log into your account using your entered Email ID {{.Email}} and password.
+
+Regards,
+Team SimpleRedirect

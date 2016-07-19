@@ -1,0 +1,58 @@
+<html>
+	{{with .RequestingUser}}
+	<head>
+		<title>{{.Firstname}} {{.Lastname}} - Home - SimpleRedirect </title>
+	</head>
+	<body>
+		<h1> {{.Firstname}} {{.Lastname}} </h3>
+		<h2> {{.Email}} </h2>
+		<h3> {{.Registeredon}} </h3>
+		<h4> Userid: {{.Userid}} </h4>
+	</body>
+	{{end}}
+	<p>
+		Create New Redirect:<br>
+		<form method="POST" action="/addredirect">
+			Redirect ID<input type="text" name="requestedredirectid" placeholder="Enter New Redirect ID">
+			Target Link<input type="text" name="requestedtargetlink" placeholder="Enter Target URL">
+			<input type="hidden" name="formsid" value="{{.FormSid}}">
+			<input type="submit" name="submit" value="Shorten!">
+		</form>
+	</p>
+	<p>
+		{{if not .ActiveRedirects}}
+			You have no active redirects.
+		{{else}}
+			Your active redirects are:<br>
+		<table>
+			<tr>
+				<td>
+					Target Link
+				</td>
+				<td>
+					Redirect ID
+				</td>
+				<td>
+					Created On
+				</td>
+			</tr>
+			{{range .ActiveRedirects}}
+				<tr>
+					<td>
+						<a href = "{{.Targetlink}}">Link</a>
+					</td>
+					<td>
+						<a href = "/{{.Redirectid}}">{{.Redirectid}}</a>
+					</td>
+					<td>
+						{{.Createdon}}
+					</td>
+				</tr>
+			{{end}}
+		</table>
+		{{end}}
+	</p>
+	<p>
+		<a href="/logout">Logout</a>
+	</p>
+</html>

@@ -1,5 +1,6 @@
 # simpleredirect
 A simple URL shrinking &amp; redirecting service, written in Golang with MySQL database.
+**Current Version: v1.00**
 
 **First installation guide**
 
@@ -24,3 +25,8 @@ $ go install simpleredirect
 $ cd $GOPATH/bin
 
 $ ./simpleredirect
+
+**Version Releases:**
+1. 1.00 : 19th July, 2016
+
+First release. Fully functional application, provisioned with user authentication, session management.
